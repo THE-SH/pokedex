@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "geogrotesque";
+    src: url("Geogrotesque-Regular.woff2") format("woff2");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#app {
+    position: relative;
+    background: #eee;
+    width: 100%;   
+    height: 100%;
+}
+
+#app h1 {
+    font-family: "geogrotesque";
+    text-transform: uppercase;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#app .grid-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#app .grid-container .grid-item {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+    transition: box-shadow 0.3s ease-in-out;
+    background: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+#app .grid-container .grid-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer
+}
+
+#app .grid-container .grid-item img {
+    width: 225px;
+    height: 225px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+}
+
+#app .grid-container .grid-item .name {
+    font-family: "geogrotesque";
+    text-transform: uppercase;
+    position: relative;
+    font-size: 18px;
+    margin: 10px auto;
+    margin-bottom: 0;
+    width: 300px;
+}
