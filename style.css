@@ -26,6 +26,7 @@
     position: relative;
     display: grid;
     grid-template-columns: auto auto auto auto;
+    justify-content: center;
     padding: 10px;
     margin: 0 auto;
     width: 80%;
@@ -35,6 +36,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, .05);
     transition: box-shadow 0.3s ease-in-out;
     background: #fff;
+    width: 300px;
     font-size: 30px;
     text-align: center;
     padding: 20px;
@@ -60,4 +62,22 @@
     margin: 10px auto;
     margin-bottom: 0;
     width: 300px;
+}
+
+@media (max-width: 1500px) {
+    #app .grid-container {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media (max-width: 1150px) {
+    #app .grid-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 750px) {
+    #app .grid-container {
+        grid-template-columns: auto;
+    }
 }
