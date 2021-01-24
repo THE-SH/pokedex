@@ -9,16 +9,20 @@ const pokePromises = [...Array(150)].map(async (_, i) => {
 
     const pokeTitle = document.createElement('h1');
     const gridContainer = document.createElement('div');
-    
+    const loadingElement = document.createElement('div');
+
     pokeTitle.innerText = 'pokedex';
     gridContainer.classList.add('grid-container');
+    loadingElement.classList.add('loader');
 
     container.appendChild(pokeTitle);
     container.appendChild(gridContainer);
+    container.appendChild(loadingElement);
 
     const result = await Promise.all(pokePromises);
     
     for (const { sprites, id, name } of result) {
+        loadingElement.remove();
         gridContainer.insertAdjacentHTML('beforeend', `
             <div class="grid-item">
                 <img src="${sprites.front_default}">
